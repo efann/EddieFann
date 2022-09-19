@@ -73,18 +73,18 @@ h1.page-header
   Header
 */
 
-#block-header
+#block-headerblock
 {
   background-color: #002C54;
   line-height: 1.0;
 }
 
-#block-header .title
+#block-headerblock .title
 {
   padding: 20px 0 10px 0;
 }
 
-#block-header .title a
+#block-headerblock .title a
 {
   color: white;
   font-size: 10.0vw;
@@ -94,9 +94,9 @@ h1.page-header
 /*
   Must go after .title a. Otherwise .title a takes precedent and the title color will not change on hover.
 */
-#block-header .title a:active,
-#block-header .title a:hover,
-#block-header .title a:focus
+#block-headerblock .title a:active,
+#block-headerblock .title a:hover,
+#block-headerblock .title a:focus
 {
   text-decoration: none;
   color: #0B93D5;;
@@ -104,10 +104,18 @@ h1.page-header
 
 @media (min-width: 768px)
 {
-  #block-header .title a
+  #block-headerblock .title a
   {
     font-size: 80px;
   }
+}
+
+#block-headerblock .slogan
+{
+  padding-left: 40px;
+  font-size: 2.0vw;
+  font-style: italic;
+  color: white;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
