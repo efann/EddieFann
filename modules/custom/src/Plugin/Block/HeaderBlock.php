@@ -12,10 +12,10 @@ use Drupal\views\Views;
 //-------------------------------------------------------------------------------------------------
 
 /**
- * Provides a 'quotes' block.
+ * Provides a header block.
  *
  * @Block(
- *   id = "quotes_block",
+ *   id = "header_block",
  *   admin_label = @Translation("Header Block"),
  *   category = @Translation("Custom block for displaying the header.")
  * )

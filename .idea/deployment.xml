@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="NorthupWiley" compareModeInSync="TIMESTAMP">
+  <component name="PublishConfigData" serverName="NorthupWiley" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
     <serverData>
       <paths name="NorthupWiley">
         <serverdata>
@@ -51,6 +52,7 @@
             <excludedPath local="true" path="$PROJECT_DIR$/.gitattributes" />
             <excludedPath local="true" path="$PROJECT_DIR$/.gitignore" />
             <excludedPath path="/var/www/northupwiley.com/public_html/themes/bstrap_child/js/flexslider" />
+            <excludedPath path="/var/www/northupwiley.com/public_html/modules/contrib" />
           </excludedPaths>
         </serverdata>
       </paths>
