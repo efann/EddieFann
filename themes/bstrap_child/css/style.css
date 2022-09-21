@@ -102,14 +102,6 @@ h1.page-header
   color: #0B93D5;;
 }
 
-@media (min-width: 768px)
-{
-  #block-headerblock .title a
-  {
-    font-size: 80px;
-  }
-}
-
 #block-headerblock .slogan
 {
   padding-left: 40px;
@@ -117,6 +109,20 @@ h1.page-header
   font-style: italic;
   color: white;
 }
+
+@media (min-width: 768px)
+{
+  #block-headerblock .title a
+  {
+    font-size: 80px;
+  }
+
+  #block-headerblock .slogan
+  {
+    font-size: 1.75vw;
+  }
+}
+
 
 /*----------------------------------------------------------------------------------------------------*/
 /*

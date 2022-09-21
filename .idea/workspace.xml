@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ac4346-0bca-40d1-b927-2f279d5c0c8b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/custom/src/Plugin/Block/HeaderBlock.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/custom/src/Plugin/Block/HeaderBlock.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bstrap_child/css/style.css" afterDir="false" />
@@ -100,6 +99,11 @@
       <workItem from="1663625826243" duration="2869000" />
       <workItem from="1663628890033" duration="252000" />
       <workItem from="1663644652080" duration="525000" />
+      <workItem from="1663684629977" duration="40000" />
+      <workItem from="1663684769759" duration="269000" />
+      <workItem from="1663685078510" duration="1088000" />
+      <workItem from="1663686625789" duration="123000" />
+      <workItem from="1663703575861" duration="369000" />
     </task>
     <servers />
   </component>

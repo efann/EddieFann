@@ -5,7 +5,6 @@
 namespace Drupal\custom\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\views\Views;
 
 //-------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
@@ -31,22 +30,17 @@ class HeaderBlock extends BlockBase
   {
     $lcContent = "";
 
-    $lcContent .= "<div class='title'><a href='/'>\n";
     // From https://drupal.stackexchange.com/questions/187400/how-do-i-show-the-site-slogan
-    $lcContent .= \Drupal::config('system.site')->get('name') . "\n";
-    $lcContent .= "</a></div>\n";
 
-    $lcContent .= "<div class='slogan'>\n";
-    // From https://drupal.stackexchange.com/questions/187400/how-do-i-show-the-site-slogan
-    $lcContent .= \Drupal::config('system.site')->get('slogan') . "\n";
-    $lcContent .= "</div>\n";
+    $lcContent .= "<div class='title'><a href='/'>" . \Drupal::config('system.site')->get('name') . "</a></div>\n";
+    $lcContent .= "<div class='slogan'>" . \Drupal::config('system.site')->get('slogan') . "</div>\n";
 
-
-    // From https://drupal.stackexchange.com/questions/199527/how-do-i-correctly-setup-caching-for-my-custom-block-showing-content-depending-o
     return (array(
         '#type' => 'markup',
         '#cache' => array('max-age' => 0),
-        '#markup' => $lcContent,
+      // From https://drupal.stackexchange.com/questions/184963/pass-raw-html-to-markup
+      // Otherwise, convas tag was being stripped.
+        '#markup' => \Drupal\Core\Render\Markup::create($lcContent)
     ));
 
   }
