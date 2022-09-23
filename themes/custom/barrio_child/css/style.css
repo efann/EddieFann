@@ -1,0 +1,295 @@
+/**
+ * Place your custom styles here.
+ */
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset
+{
+  font-family: 'Comfortaa', cursive;
+}
+
+body
+{
+  font-weight: normal;
+  background-color: white;
+  color: black;
+}
+
+a,
+a:link,
+a:visited
+{
+  text-decoration: none;
+  color: #0B93D5;
+  font-style: normal;
+  font-weight: bold;
+
+  /*
+    From https://stackoverflow.com/questions/6008324/fade-effect-on-link-hover
+  */
+  transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+}
+
+a:active, a:hover
+{
+  text-decoration: underline;
+}
+
+/*
+  This keeps the content from sliding under the header.
+*/
+
+.main-container
+{
+  padding-top: 67px;
+}
+
+@media (min-width: 768px)
+{
+  .main-container
+  {
+    padding-top: 150px;
+  }
+}
+
+.navbar-inverse
+{
+  background-color: #002C54;
+}
+
+.navbar-toggle
+{
+  background-color: gray;
+}
+
+h1.page-header
+{
+  display: none;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/*
+  Header
+*/
+
+#block-barrio-child-headerblock
+{
+  background-color: #002C54;
+  line-height: 1.0;
+}
+
+#block-barrio-child-headerblock .title
+{
+  padding: 20px 0 10px 0;
+}
+
+#block-barrio-child-headerblock .title a
+{
+  color: white;
+  font-size: 10.0vw;
+  text-shadow: grey 0.05em 0.05em 0.09em;
+}
+
+/*
+  Must go after .title a. Otherwise .title a takes precedent and the title color will not change on hover.
+*/
+#block-barrio-child-headerblock .title a:active,
+#block-barrio-child-headerblock .title a:hover,
+#block-barrio-child-headerblock .title a:focus
+{
+  text-decoration: none;
+  color: #0B93D5;;
+}
+
+#block-barrio-child-headerblock .slogan
+{
+  padding-left: 40px;
+  font-size: 3.0vw;
+  font-style: italic;
+  color: white;
+}
+
+@media (min-width: 768px)
+{
+  #block-barrio-child-headerblock .title a
+  {
+    font-size: 80px;
+  }
+
+  #block-barrio-child-headerblock .slogan
+  {
+    font-size: 1.75vw;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/*
+  Slogan
+*/
+
+#block-slogan-2
+{
+  display: none;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/*
+  Menu
+*/
+
+#block-custommainmenu,
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form
+{
+  background-color: #002C54;
+}
+
+.navbar-inverse .navbar-nav > li > a
+{
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus
+{
+  color: #EFD797;
+  background-color: #002C54;
+}
+
+.navbar-header
+{
+  width: 100%;
+}
+
+@media (min-width: 768px)
+{
+  .navbar .navbar-nav
+  {
+    float: right;
+  }
+
+  .navbar-nav > li > a
+  {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+}
+
+/*
+  Weird, but otherwise you get scroll bars when expanding sub-menu.
+*/
+#navbar-collapse.in
+{
+  overflow: hidden;
+  display: table;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/*
+  Contact Form
+*/
+
+.captcha .panel-heading
+{
+  display: none;
+}
+
+#contact-message-feedback-form label
+{
+  display: none;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*
+  Blocks
+*/
+
+#block-quotesblock .quote
+{
+  text-align: center;
+  padding: 15px;
+}
+
+#block-quotesblock .refer
+{
+  text-align: center;
+  padding: 5px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*
+  Flexslider
+*/
+
+.flexslider .slides img
+{
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.flex-direction-nav .flex-prev,
+.flex-direction-nav .flex-next
+{
+  height: auto;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*
+  Ajax
+*/
+
+#ajax-loading
+{
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1100;
+  width: 42px;
+  height: 42px;
+  top: 15px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: none;
+  background-color: white;
+}
+
+@media (min-width: 768px)
+{
+  #ajax-loading
+  {
+    top: 110px;
+  }
+}
+
+#ajax-loading img
+{
+  /* Override beo.style.css img setting */
+  display: block;
+
+  width: 32px;
+  height: auto;
+  margin: 5px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*
+  jQuery UI
+*/
+
+.ui-dialog .ui-dialog-content
+{
+  padding: 15px;
+}
+
+.ui-widget.ui-widget-content
+{
+  border: none;
+}
+
+/*----------------------------------------------------------------------------------------------------*/

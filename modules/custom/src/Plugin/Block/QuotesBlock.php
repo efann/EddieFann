@@ -49,15 +49,19 @@ class QuotesBlock extends BlockBase
 
     $lcContent = '';
 
-    $lcContent .= "<div id='quotes_block' style='overflow: hidden; clear: both;'>\n";
+    $lcContent .= "<div id='carousel_quotes_block' class='carousel slide' data-ride='carousel'>\n";
 
-    $lcContent .= "<div class='flexslider'>\n";
-    $lcContent .= "<ul class='slides'>\n";
+    $lcContent .= "<ol class='carousel-indicators'>\n";
+    $lcContent .= "<li data-target='#carousel_quotes_block' data-slide-to='0' class='active'></li>\n";
+    $lcContent .= "<li data-target='#carousel_quotes_block' data-slide-to='1'></li>\n";
+    $lcContent .= "<li data-target='#carousel_quotes_block' data-slide-to='2'></li>\n";
+    $lcContent .= "</ol>\n";
 
+    $lcContent .= "<div class='carousel-inner'>\n";
+
+    $lcActive = " active";
     foreach ($loViewExecutable->result as $lnIndex => $loRow)
     {
-      $lcContent .= "<li>\n";
-
       $loNode = $loRow->_entity;
 
       $lcBody = $loNode->get('body')->value;
@@ -65,13 +69,21 @@ class QuotesBlock extends BlockBase
       $lcAuthorURL = $loNode->get('field_author_url')->value;
 
       $lcTarget = (stripos($lcAuthorURL, 'northup-wiley.com') === false) ? " target='_blank'" : '';
-      $lcContent .= "<div class='quote'>$lcBody</div><div class='refer'>-&nbsp;<a href='$lcAuthorURL'$lcTarget>$lcAuthor</a></div>" . "\n";
+      $lcContent .= "<div class='carousel-item$lcActive'>$lcBody<div class='refer'>-&nbsp;<a href='$lcAuthorURL'$lcTarget>$lcAuthor</a></div></div>" . "\n";
 
-      $lcContent .= "</li>\n";
+      $lcActive = "";
     }
 
-    $lcContent .= "</ul>\n";
     $lcContent .= "</div>\n";
+
+    $lcContent .= "<a class='carousel-control-prev' href='#carousel_quotes_block' role='button' data-slide='prev'>\n";
+    $lcContent .= "<span class='carousel-control-prev-icon' aria-hidden='true'></span>\n";
+    $lcContent .= "<span class='sr-only'>Previous</span>\n";
+    $lcContent .= "</a>\n";
+    $lcContent .= "<a class='carousel-control-next' href='#carousel_quotes_block' role='button' data-slide='next'>\n";
+    $lcContent .= "<span class='carousel-control-next-icon' aria-hidden='true'></span>\n";
+    $lcContent .= "<span class='sr-only'>Next</span>\n";
+    $lcContent .= "</a>\n";
 
     $lcContent .= "</div>\n";
 
