@@ -52,9 +52,10 @@ class QuotesBlock extends BlockBase
     $lcContent .= "<div id='carousel_quotes_block' class='carousel slide' data-ride='carousel'>\n";
 
     $lcContent .= "<ol class='carousel-indicators'>\n";
-    $lcContent .= "<li data-target='#carousel_quotes_block' data-slide-to='0' class='active'></li>\n";
-    $lcContent .= "<li data-target='#carousel_quotes_block' data-slide-to='1'></li>\n";
-    $lcContent .= "<li data-target='#carousel_quotes_block' data-slide-to='2'></li>\n";
+    foreach ($loViewExecutable->result as $lnIndex => $loRow)
+    {
+      $lcContent .= "<li data-target='#carousel_quotes_block' data-slide-to='$lnIndex'" . ($lnIndex == 0 ? " class='active'" : "") . "></li>\n";
+    }
     $lcContent .= "</ol>\n";
 
     $lcContent .= "<div class='carousel-inner'>\n";

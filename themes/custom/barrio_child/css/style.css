@@ -222,21 +222,13 @@ h1.page-header
 
 /*----------------------------------------------------------------------------------------*/
 /*
-  Flexslider
+  Carousel
 */
-
-.flexslider .slides img
+#carousel_quotes_block
 {
-  width: auto;
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
-}
-
-.flex-direction-nav .flex-prev,
-.flex-direction-nav .flex-next
-{
-  height: auto;
+  height: 200px;
+  background: #BBBBBB;
+  text-align: center;
 }
 
 /*----------------------------------------------------------------------------------------*/
