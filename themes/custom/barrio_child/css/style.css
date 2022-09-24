@@ -4,7 +4,7 @@
 
 body, caption, th, td, input, textarea, select, option, legend, fieldset
 {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', cursive !important;
 }
 
 body
@@ -63,7 +63,7 @@ a:active, a:hover
   background-color: gray;
 }
 
-h1.page-header
+h1.title
 {
   display: none;
 }
@@ -296,13 +296,14 @@ h1.page-header
 
 .site-footer
 {
-  font-family: revert;
+  font-family: 'Comfortaa', cursive !important;
   padding: 0;
 }
 
 .site-footer .block
 {
   border: none;
+  margin: 0;
 }
 
 .site-footer .row,
