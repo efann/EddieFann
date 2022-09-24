@@ -69,8 +69,8 @@ class QuotesBlock extends BlockBase
       $lcAuthor = $loNode->get('field_author')->value;
       $lcAuthorURL = $loNode->get('field_author_url')->value;
 
-      $lcTarget = (stripos($lcAuthorURL, 'northup-wiley.com') === false) ? " target='_blank'" : '';
-      $lcContent .= "<div class='carousel-item$lcActive'>$lcBody<div class='refer'>-&nbsp;<a href='$lcAuthorURL'$lcTarget>$lcAuthor</a></div></div>" . "\n";
+      // Beo.updateLinksWithExternalURLs now takes care of the target.
+      $lcContent .= "<div class='carousel-item$lcActive'>$lcBody<div class='refer'>-&nbsp;<a href='$lcAuthorURL'>$lcAuthor</a></div></div>" . "\n";
 
       $lcActive = "";
     }
