@@ -73,6 +73,11 @@ h1.page-header
   Header
 */
 
+#navbar-top
+{
+  background-color: #002C54;
+}
+
 #block-barrio-child-headerblock
 {
   background-color: #002C54;
@@ -289,12 +294,21 @@ h1.page-header
   Footer
 */
 
+.site-footer
+{
+  font-family: revert;
+  padding: 0;
+}
+
 .site-footer .block
 {
   border: none;
 }
 
-.site-footer section
+.site-footer .row,
+.site-footer .block
 {
   width: 100%;
 }
+
+/*----------------------------------------------------------------------------------------*/

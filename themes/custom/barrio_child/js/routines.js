@@ -19,7 +19,7 @@ var Routines =
     },
 
     //----------------------------------------------------------------------------------------------------
-    setupQuotesFlexSlider: function ()
+    setupQuotesCarousel: function ()
     {
       var loCarousel = jQuery(Routines.QUOTES_BLOCK);
 
