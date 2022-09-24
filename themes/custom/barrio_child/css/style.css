@@ -58,7 +58,7 @@ a:active, a:hover
   background-color: #002C54;
 }
 
-.navbar-toggle
+.navbar-toggler
 {
   background-color: gray;
 }
@@ -191,6 +191,91 @@ h1.title
 {
   overflow: hidden;
   display: table;
+}
+
+.navbar-toggler
+{
+  background: white;
+  border: 1.0px solid black;
+  border-radius: 0.5rem;
+  padding: 0;
+}
+
+.navbar-toggler
+{
+  background-color: #62453D;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+}
+
+/*
+  Brilliant. . . .
+  From https://julienmelissas.com/animated-x-icon-for-the-bootstrap-navbar-toggle/
+  Make sure that you add the classes to system/page.html.twig
+*/
+.navbar-toggler .icon-bar
+{
+  width: 22px;
+  transition: all 0.2s;
+}
+
+.navbar-toggler .top-bar
+{
+  -webkit-transform: translateX(3px) rotate(45deg);
+  -moz-transform: translateX(3px) rotate(45deg);
+  -o-transform: translateX(3px) rotate(45deg);
+
+  transform: translateX(3px) rotate(45deg);
+
+  -webkit-transform-origin: 10% 10%;
+  -moz-transform-origin: 10% 10%;
+  -o-transform-origin: 10% 10%;
+
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar
+{
+  opacity: 0;
+}
+
+.navbar-toggler .bottom-bar
+{
+  -webkit-transform: translateX(3px) rotate(-45deg);
+  -moz-transform: translateX(3px) rotate(-45deg);
+  -o-transform: rotate(-45deg);
+
+  transform: translateX(3px) rotate(-45deg);
+
+  -webkit-transform-origin: 10% 90%;
+  -moz-transform-origin: 10% 90%;
+  -o-transform-origin: 10% 90%;
+
+  transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar
+{
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -o-transform: rotate(0);
+
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar
+{
+  opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar
+{
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -o-transform: rotate(0);
+
+  transform: rotate(0);
 }
 
 /*----------------------------------------------------------------------------------------------------*/
