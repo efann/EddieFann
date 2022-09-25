@@ -41,10 +41,10 @@ jquery.ui:
     url: https://tldrlegal.com/license/mit-license
     gpl-compatible: true
   js:
-    //ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js: { type: external, minified: true }
+    //ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js: { type: external, minified: true }
   css:
     component:
-      css/jquery-ui-1.12.1/jquery-ui.min.css: { minified: true }
+      css/jquery-ui-1.13.2/jquery-ui.min.css: { minified: true }
 
 beo.routines:
   remote: https://gist.github.com/efann
@@ -52,9 +52,8 @@ beo.routines:
     name: Eclipse Public License
     url: https://opensource.org/licenses/EPL-1.0
     gpl-compatible: true
-  css:
-    theme:
-#      js/beo.routines/beo.style.css: {}
+  # We now only want the beo.routines.js, not the css
+  # as Bootstrap 4 has subtle differences from 3.
   js:
     js/beo.routines/beo.routines.js: {}
 
