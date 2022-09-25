@@ -211,12 +211,21 @@ h1.title
 
 /*----------------------------------------------------------------------------------------*/
 /*
+  Navbars.
+*/
+#navbar-top
+{
+  background-color: #002C54;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*
   Menu items.
 */
 
 .navbar-toggler
 {
-  background-color: #62453D;
+  background-color: #007BFF;
   position: fixed;
   top: 10px;
   right: 15px;
