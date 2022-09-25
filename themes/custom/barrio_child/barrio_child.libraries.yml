@@ -54,7 +54,7 @@ beo.routines:
     gpl-compatible: true
   css:
     theme:
-      js/beo.routines/beo.style.css: {}
+#      js/beo.routines/beo.style.css: {}
   js:
     js/beo.routines/beo.routines.js: {}
 
