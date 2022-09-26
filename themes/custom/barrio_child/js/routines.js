@@ -41,61 +41,6 @@ var Routines =
     },
 
     //----------------------------------------------------------------------------------------------------
-    loadProjectByAJAX: function (tnNodeID)
-    {
-      Routines.showAJAX(true);
-
-      // To determine the URL. From http://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
-      jQuery.ajax({
-        url: window.location.protocol + '//' + window.location.host + '/ajax/node/' + tnNodeID
-      }).done(function (toData)
-      {
-        var lcDialog = '#ProjectInformation';
-        if (jQuery(lcDialog).length == 0)
-        {
-          jQuery('body').append('<div id="' + lcDialog.substring(1) + '"></div>');
-        }
-
-        var loData = jQuery(toData);
-        jQuery(lcDialog).html(loData.find('nodeinfo').find('body').text());
-
-        jQuery(lcDialog).find('a').each(function ()
-        {
-          jQuery(this).attr('target', '_blank');
-          jQuery(this).attr('title', 'This link will open in a new browser window');
-        });
-
-        jQuery(lcDialog).dialog(
-          {
-            title: 'Information',
-            width: '90%',
-            height: 'auto',
-            modal: true,
-            autoOpen: true,
-            show: {
-              effect: 'fade',
-              duration: 300
-            },
-            hide: {
-              effect: 'fade',
-              duration: 300
-            },
-            create: function (toEvent, toUI)
-            {
-              // The maxWidth property doesn't really work.
-              // From http://stackoverflow.com/questions/16471890/responsive-jquery-ui-dialog-and-a-fix-for-maxwidth-bug
-              // And id="ShowTellQuote" gets enclosed in a ui-dialog wrapper. So. . . .
-              jQuery(this).parent().css('maxWidth', '800px');
-            }
-          });
-
-        Routines.showAJAX(false);
-
-      });
-
-    },
-
-    //----------------------------------------------------------------------------------------------------
     setupWatermarks: function ()
     {
       var lcForm = Routines.CONTACT_BLOCK;
@@ -159,55 +104,53 @@ var Routines =
       });
     },
 
-    //----------------------------------------------------------------------------------------------------
-    setupTaxonomyTabsForAjax: function (tcTabBlock)
-    {
-      var loTabs = jQuery(tcTabBlock);
 
-      if (loTabs.length == 0)
+    //----------------------------------------------------------------------------------------------------
+    onResizeWrapperNavbar: function ()
+    {
+      Routines.adjustNavbarMain();
+      Routines.adjustWrapper();
+
+      jQuery(window).resize(function ()
+      {
+        Routines.adjustNavbarMain();
+        Routines.adjustWrapper();
+      });
+
+    },
+    //----------------------------------------------------------------------------------------------------
+    adjustWrapper: function ()
+    {
+      let loTop = jQuery('#navbar-top');
+      let loMain = jQuery('#navbar-main');
+      let loWrapper = jQuery('#main-wrapper');
+
+      if ((loTop.length == 0) || (loMain.length == 0) || (loWrapper.length == 0))
       {
         return;
       }
 
-      loTabs.tabs({
-        show: {effect: 'slide', direction: 'up'},
-        hide: {effect: 'fadeOut', duration: 400},
-        beforeLoad: function (event, ui)
-        {
-          Routines.showAJAX(true);
-        },
-        load: function (event, ui)
-        {
-          Routines.showAJAX(false);
-        }
-      });
-
-
-      Beo.adjustTabsAlignment(loTabs);
-      jQuery(window).resize(function ()
+      let lnPaddingTop = 15;
+      lnPaddingTop += loTop.height();
+      if (loMain.is(':visible'))
       {
-        Beo.adjustTabsAlignment(loTabs);
-      });
+        lnPaddingTop += loMain.height();
+      }
 
-      loTabs.fadeIn('slow');
+      loWrapper.css('padding-top', lnPaddingTop + 'px');
     },
-
     //----------------------------------------------------------------------------------------------------
-    getJEquityVersionInfo: function ()
+    adjustNavbarMain: function ()
     {
-      jQuery('#version-info').load('/ajax/version/2 #jequity-version', function ()
+      let loTop = jQuery('#navbar-top');
+      let loMain = jQuery('#navbar-main');
+      if ((loTop.length == 0) || (loMain.length == 0))
       {
-        var lcVersion = jQuery('#app_version').html();
-        jQuery('#installation span.version').html(lcVersion);
+        return;
+      }
 
-        var lcFolder = jQuery('#app_folder').html();
-
-        var loLink = jQuery('#installation a.folder');
-        loLink.attr('href', lcFolder);
-        loLink.html(lcFolder);
-      });
+      loMain.css('top', loTop.height() + 'px');
     },
-
     //----------------------------------------------------------------------------------------------------
     showAJAX: function (tlShow)
     {

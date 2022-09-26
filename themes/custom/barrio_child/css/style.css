@@ -19,7 +19,6 @@ a:link,
 a:visited
 {
   text-decoration: none;
-  color: #0B93D5;
   font-style: normal;
   font-weight: bold;
 
@@ -42,6 +41,28 @@ h1.title
   display: none;
 }
 
+#main-wrapper
+{
+  min-height: 750px;
+  /* We set the padding-top in Routines.adjustWrapper */
+}
+
+#main-wrapper
+{
+  min-height: 550px;
+  padding-top: 140px;
+}
+
+/* Looks like 992 is the new mobile navicon */
+@media (min-width: 992px)
+{
+  #main-wrapper
+  {
+    min-height: 850px;
+    padding-top: 180px;
+  }
+}
+
 /*----------------------------------------------------------------------------------------------------*/
 /*
   Header
@@ -49,7 +70,6 @@ h1.title
 
 #block-barrio-child-headerblock
 {
-  background-color: #002C54;
   line-height: 1.0;
 }
 
@@ -61,7 +81,7 @@ h1.title
 #block-barrio-child-headerblock .title a
 {
   color: white;
-  font-size: 10.0vw;
+  font-size: 9.5vw;
   text-shadow: grey 0.05em 0.05em 0.09em;
 }
 
@@ -84,7 +104,7 @@ h1.title
   color: white;
 }
 
-@media (min-width: 768px)
+@media (min-width: 992px)
 {
   #block-barrio-child-headerblock .title a
   {
@@ -153,7 +173,7 @@ h1.title
   background-color: white;
 }
 
-@media (min-width: 768px)
+@media (min-width: 992px)
 {
   #ajax-loading
   {
@@ -211,21 +231,30 @@ h1.title
 
 /*----------------------------------------------------------------------------------------*/
 /*
-  Navbars.
+  Navbars & Menu items.
 */
+
+/*
+  By the way, the top for #navbar-main is being handled
+  dynamically by Routines.onResizeNavbarMain()
+ */
+#navbar-main,
 #navbar-top
 {
-  background-color: #002C54;
+  padding: 0;
+  margin: 0;
 }
 
-/*----------------------------------------------------------------------------------------*/
-/*
-  Menu items.
-*/
+#navbar-main,
+.navbar-toggler
+{
+  /* navbar fixed-top is set at 1030 */
+  z-index: 2000;
+}
 
 .navbar-toggler
 {
-  background-color: #007BFF;
+  background-color: #0B93D5;
   position: fixed;
   top: 10px;
   right: 15px;
@@ -311,6 +340,22 @@ h1.title
   -o-transform: rotate(0);
 
   transform: rotate(0);
+}
+
+@media (max-width: 991px)
+{
+  div.navbar-collapse
+  {
+    position: fixed;
+    width: 150px;
+    top: 60px;
+    right: 30px;
+    padding: 0 10px;
+    overflow: hidden;
+    border: 1px solid #0B93D5;
+    background: #002C54;
+    border-radius: 4px;
+  }
 }
 
 /*----------------------------------------------------------------------------------------*/
