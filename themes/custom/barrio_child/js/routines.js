@@ -142,14 +142,25 @@ var Routines =
     //----------------------------------------------------------------------------------------------------
     adjustNavbarMain: function ()
     {
-      let loTop = jQuery('#navbar-top');
-      let loMain = jQuery('#navbar-main');
-      if ((loTop.length == 0) || (loMain.length == 0))
+      let loMainNavBar = jQuery('#navbar-main');
+
+      let loTopNavBar = jQuery('#navbar-top');
+      let loToolBarAdmin = jQuery('.toolbar-menu-administration .toolbar-icon-admin-toolbar-tools-help')
+      let loToolBarTab = jQuery('.toolbar-tab .toolbar-icon-menu')
+
+      let lnTop = 0;
+
+      if (loMainNavBar.length == 0)
       {
         return;
       }
 
-      loMain.css('top', loTop.height() + 'px');
+      // Now includes the admin menu tools when logged in.
+      lnTop += (loTopNavBar.length != 0) ? Math.max(loTopNavBar.height(), parseFloat(loTopNavBar.css('height'))) : 0;
+      lnTop += (loToolBarAdmin.length != 0) ? Math.max(loToolBarAdmin.height(), parseFloat(loToolBarAdmin.css('height'))) : 0;
+      lnTop += (loToolBarTab.length != 0) ? Math.max(loToolBarTab.height(), parseFloat(loToolBarTab.css('height'))) : 0;
+
+      loMainNavBar.css('top', lnTop + 'px');
     },
     //----------------------------------------------------------------------------------------------------
     showAJAX: function (tlShow)
