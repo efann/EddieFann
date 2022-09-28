@@ -153,6 +153,14 @@ h1.title
   text-align: center;
 }
 
+/* Keeps the arrows from being active over the left and right sides. */
+.carousel-control-next, .carousel-control-prev
+{
+  top: unset;
+  bottom: 25%;
+  width: 7%;
+}
+
 /*----------------------------------------------------------------------------------------*/
 /*
   Ajax
