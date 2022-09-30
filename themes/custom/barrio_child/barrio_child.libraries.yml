@@ -57,6 +57,15 @@ beo.routines:
   js:
     js/beo.routines/beo.routines.js: {}
 
+barrio.theme:
+  # We now only want the beo.routines.js, not the css
+  # as Bootstrap 4 has subtle differences from 3.
+  js:
+    js/barrio.theme/barrio.theme.js: {}
+  css:
+    theme:
+      js/barrio.theme/barrio.theme.css: {}
+
 theme.files:
   js:
     js/routines.js: {}
@@ -71,4 +80,5 @@ custom-loading:
     - core/jquery
     - barrio_child/jquery.ui
     - barrio_child/beo.routines
+    - barrio_child/barrio.theme
     - barrio_child/theme.files
