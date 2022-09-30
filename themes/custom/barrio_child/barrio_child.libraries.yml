@@ -4,7 +4,6 @@ global-styling:
     js/global.js: {}
   css:
     component:
-      css/style.css: {}
       css/colors.css: {}
 
 bootstrap:
@@ -33,6 +32,10 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+
+# -------------------------------------------
+# Custom additions
+# -------------------------------------------
 
 jquery.ui:
   remote: https://jqueryui.com/
@@ -71,6 +74,7 @@ theme.files:
     js/routines.js: {}
   css:
     theme:
+      //fonts.googleapis.com/css?family=Comfortaa: { type: external }
       css/style.css: {}
 
 custom-loading:
