@@ -33,7 +33,7 @@ var Routines =
       // Strange. . . .
       if (loCarousel.find('a.dialogbox-image').length > 0)
       {
-        alert('Routines.setupFlexSlider must be run before Beo.setupImageDialogBox.');
+        alert('Routines.setupQuotesCarousel must be run before Beo.setupImageDialogBox.');
         return;
       }
 
