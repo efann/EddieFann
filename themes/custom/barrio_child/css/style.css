@@ -41,6 +41,17 @@ a:active, a:hover
   color: darkgrey;
 }
 
+.btn
+{
+  background-color: #0B93D5;
+  color: whitesmoke;
+}
+
+.btn:hover
+{
+  background-color: darkgrey;
+}
+
 /*----------------------------------------------------------------------------------------------------*/
 /*
   Header
