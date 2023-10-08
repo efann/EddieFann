@@ -121,7 +121,7 @@ var Routines =
       }
       else
       {
-        loAJAX.hide();
+        loAJAX.fadeOut(750);
       }
 
     }
