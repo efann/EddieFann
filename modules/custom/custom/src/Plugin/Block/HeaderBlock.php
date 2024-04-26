@@ -32,8 +32,9 @@ class HeaderBlock extends BlockBase
 
     // From https://drupal.stackexchange.com/questions/187400/how-do-i-show-the-site-slogan
 
-    $lcContent .= "<div class='title'><a href='/'>" . \Drupal::config('system.site')->get('name') . "</a></div>\n";
-    $lcContent .= "<div class='slogan'>" . \Drupal::config('system.site')->get('slogan') . "</div>\n";
+    // I was using \Drupal::config('system.site')->get('name') for the title.
+    $lcContent .= "<div class='slogan'><a href='/'>" . \Drupal::config('system.site')->get('slogan') . "</a></div>\n";
+    $lcContent .= "<div class='author'>by Eddie Fann</div>\n";
 
     return (array(
         '#type' => 'markup',

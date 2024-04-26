@@ -57,53 +57,67 @@ a:active, a:hover
   Header
 */
 
+nav.navbar .container,
+nav.navbar .container .row,
+#block-barrio-child-headerblock
+{
+  width: 100%;
+}
+
 #block-barrio-child-headerblock
 {
   line-height: 1.0;
 }
 
-#block-barrio-child-headerblock .title
+#block-barrio-child-headerblock .slogan
 {
   padding: 20px 0 10px 0;
+  text-align: center;
+  padding-left: 40px;
+  font-style: italic;
+  color: white;
 }
 
-#block-barrio-child-headerblock .title a
+#block-barrio-child-headerblock .slogan a
 {
   color: white;
-  font-size: 9.5vw;
+  font-size: 3.0vw;
   text-shadow: grey 0.05em 0.05em 0.09em;
 }
 
 /*
-  Must go after .title a. Otherwise .title a takes precedent and the title color will not change on hover.
+  Must go after .slogan a. Otherwise .slogan a takes precedent and the title color will not change on hover.
 */
-#block-barrio-child-headerblock .title a:active,
-#block-barrio-child-headerblock .title a:hover,
-#block-barrio-child-headerblock .title a:focus
+#block-barrio-child-headerblock .slogan a:active,
+#block-barrio-child-headerblock .slogan a:hover,
+#block-barrio-child-headerblock .slogan a:focus
 {
   text-decoration: none;
   color: #0B93D5;;
 }
 
-#block-barrio-child-headerblock .slogan
+#block-barrio-child-headerblock .author
 {
-  padding-left: 40px;
-  font-size: 3.0vw;
-  font-style: italic;
-  color: white;
+  font-size: 1.75vw;
+  color: #CCCCCC;
+  text-align: center;
 }
 
 @media (min-width: 992px)
 {
-  #block-barrio-child-headerblock .title a
-  {
-    font-size: 80px;
-  }
+}
 
-  #block-barrio-child-headerblock .slogan
-  {
-    font-size: 1.75vw;
-  }
+/*----------------------------------------------------------------------------------------------------*/
+/*
+  Footer
+*/
+
+.site-footer .content a:active,
+.site-footer .content a:hover,
+.site-footer .content a:focus
+{
+  text-decoration: none;
+  color: #0B93D5;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
