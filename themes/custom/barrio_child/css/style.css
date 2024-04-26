@@ -52,10 +52,19 @@ a:active, a:hover
   background-color: darkgrey;
 }
 
+ol.line-padding li:not(:first-child)
+{
+  padding-top: 15px;
+}
+
 /*----------------------------------------------------------------------------------------------------*/
 /*
   Header
 */
+#navbar-top
+{
+  min-height: 75px;
+}
 
 nav.navbar .container,
 nav.navbar .container .row,
@@ -147,17 +156,6 @@ nav.navbar .container .row,
 
 /*----------------------------------------------------------------------------------------*/
 /*
-  Carousel
-*/
-#carousel_quotes_block
-{
-  height: 200px;
-  background: #BBBBBB;
-  text-align: center;
-}
-
-/*----------------------------------------------------------------------------------------*/
-/*
   Ajax
 */
 
@@ -184,6 +182,33 @@ nav.navbar .container .row,
     Important is still needed to override .text-info, but it is limited to #ajax-loading
   */
   color: #002C54 !important;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*
+  Bootstrap Carousel
+*/
+
+#carousel_quotes_block
+{
+  height: 225px;
+  background: #BBBBBB;
+  text-align: center;
+}
+
+div.carousel.slide .carousel-inner
+{
+  padding: 8px;
+}
+
+div.carousel.slide .carousel-control-prev
+{
+  margin-left: 8px;
+}
+
+div.carousel.slide .carousel-control-next
+{
+  margin-right: 8px;
 }
 
 /*----------------------------------------------------------------------------------------*/

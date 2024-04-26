@@ -34,7 +34,6 @@ class HeaderBlock extends BlockBase
 
     // I was using \Drupal::config('system.site')->get('name') for the title.
     $lcContent .= "<div class='slogan'><a href='/'>" . \Drupal::config('system.site')->get('slogan') . "</a></div>\n";
-    $lcContent .= "<div class='author'>by Eddie Fann</div>\n";
 
     return (array(
         '#type' => 'markup',
