@@ -19,28 +19,6 @@ var Routines =
     },
 
     //----------------------------------------------------------------------------------------------------
-    setupQuotesCarousel: function ()
-    {
-      var loCarousel = jQuery(Routines.QUOTES_BLOCK);
-
-      if (loCarousel.length == 0)
-      {
-        return;
-      }
-
-      // FlexSlide setup should come before Beo.setupImageDialogBox. Otherwise, there appears
-      // to be some issues with the first image linking to the image and not Beo.setupImageDialogBox.
-      // Strange. . . .
-      if (loCarousel.find('a.dialogbox-image').length > 0)
-      {
-        alert('Routines.setupQuotesCarousel must be run before Beo.setupImageDialogBox.');
-        return;
-      }
-
-      //loCarousel.carousel()
-    },
-
-    //----------------------------------------------------------------------------------------------------
     setupWatermarks: function ()
     {
       var lcForm = Routines.CONTACT_BLOCK;
