@@ -66,6 +66,12 @@ ol.line-padding li:not(:first-child)
   min-height: 75px;
 }
 
+#navbar-top,
+#navbar-main
+{
+  background: #002C54;
+}
+
 nav.navbar .container,
 nav.navbar .container .row,
 #block-barrio-child-headerblock
@@ -213,10 +219,15 @@ div.carousel.slide .carousel-control-next
   height: auto;
 }
 
-.carousel-indicators ::marker
+/*
+  The ::marker CSS pseudo-element is not used by default in Bootstrap's carousel because indicators are buttons rather than list items.
+*/
+.carousel-indicators li::marker
 {
-  display: none;
+  font-size: 0;
+  content: "";
 }
+
 
 /*----------------------------------------------------------------------------------------*/
 /*
