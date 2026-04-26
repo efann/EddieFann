@@ -44,7 +44,7 @@ var Routines =
     setupWatermarks: function ()
     {
       var lcForm = Routines.CONTACT_BLOCK;
-      if (jQuery(lcForm).length == 0)
+      if (jQuery(lcForm).length === 0)
       {
         return;
       }

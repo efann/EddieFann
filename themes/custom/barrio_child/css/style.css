@@ -204,11 +204,18 @@ div.carousel.slide .carousel-inner
 div.carousel.slide .carousel-control-prev
 {
   margin-left: 8px;
+  height: auto;
 }
 
 div.carousel.slide .carousel-control-next
 {
   margin-right: 8px;
+  height: auto;
+}
+
+.carousel-indicators ::marker
+{
+  display: none;
 }
 
 /*----------------------------------------------------------------------------------------*/

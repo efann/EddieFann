@@ -49,12 +49,12 @@ class QuotesBlock extends BlockBase
 
     $lcContent = '';
 
-    $lcContent .= "<div id='carousel_quotes_block' class='carousel slide' data-ride='carousel'>\n";
+    $lcContent .= "<div id='carousel_quotes_block' class='carousel slide' data-bs-ride='carousel'>\n";
 
     $lcContent .= "<ol class='carousel-indicators'>\n";
     foreach ($loViewExecutable->result as $lnIndex => $loRow)
     {
-      $lcContent .= "<li data-target='#carousel_quotes_block' data-slide-to='$lnIndex'" . ($lnIndex == 0 ? " class='active'" : "") . "></li>\n";
+      $lcContent .= "<li data-bs-target='#carousel_quotes_block' data-bs-slide-to='$lnIndex'" . ($lnIndex == 0 ? " class='active'" : "") . "></li>\n";
     }
     $lcContent .= "</ol>\n";
 
@@ -77,13 +77,13 @@ class QuotesBlock extends BlockBase
 
     $lcContent .= "</div>\n";
 
-    $lcContent .= "<a class='carousel-control-prev btn btn-primary' href='#carousel_quotes_block' role='button' data-slide='prev'>\n";
+    $lcContent .= "<a class='carousel-control-prev btn btn-primary' href='#carousel_quotes_block' role='button' data-bs-slide='prev'>\n";
     $lcContent .= "<span class='carousel-control-prev-icon' aria-hidden='true'></span>\n";
-    $lcContent .= "<span class='sr-only'>Previous</span>\n";
+    $lcContent .= "<span class='visually-hidden'>Previous</span>\n";
     $lcContent .= "</a>\n";
-    $lcContent .= "<a class='carousel-control-next btn btn-primary' href='#carousel_quotes_block' role='button' data-slide='next'>\n";
+    $lcContent .= "<a class='carousel-control-next btn btn-primary' href='#carousel_quotes_block' role='button' data-bs-slide='next'>\n";
     $lcContent .= "<span class='carousel-control-next-icon' aria-hidden='true'></span>\n";
-    $lcContent .= "<span class='sr-only'>Next</span>\n";
+    $lcContent .= "<span class='visually-hidden'>Next</span>\n";
     $lcContent .= "</a>\n";
 
     $lcContent .= "</div>\n";
