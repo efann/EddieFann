@@ -140,9 +140,10 @@ nav.navbar .container .row,
   Slogan
 */
 
-#block-slogan-2
+#Slogan .modal-body
 {
-  display: none;
+  background-color: #002C54;
+  color: white;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
