@@ -6,9 +6,9 @@
 var Routines =
   {
     CONTACT_BLOCK: '#contact-message-feedback-form',
-    SLOGAN_BLOCK: '#block-slogan-2',
-    TITLE_LINK: '#block-barrio-child-headerblock .title a',
-    SLOGAN_DIALOG: '#SloganText',
+
+    SLOGAN_LINK: '#block-barrio-child-headerblock .slogan a',
+    SLOGAN_DIALOG: '#Slogan',
 
     QUOTES_BLOCK: '#carousel_quotes_block',
 
@@ -40,45 +40,19 @@ var Routines =
     setupSloganDialog: function ()
     {
       // Should only exist on the front page.
-      var loText = jQuery(Routines.SLOGAN_BLOCK);
+      var loText = jQuery(Routines.SLOGAN_DIALOG);
       if (loText.length == 0)
       {
         return;
       }
 
-      jQuery(Routines.TITLE_LINK).click(function (toEvent)
+      jQuery(Routines.SLOGAN_LINK).click(function (toEvent)
       {
         toEvent.preventDefault();
 
-        var lcDialog = Routines.SLOGAN_DIALOG;
-        if (jQuery(lcDialog).length == 0)
-        {
-          jQuery('body').append('<div id="' + lcDialog.substring(1) + '">' + loText.html() + '</div>');
-        }
+        // From https://stackoverflow.com/questions/45621755/add-bootstrap-modal-using-javascript-and-cloned-node
+        jQuery(Routines.SLOGAN_DIALOG).modal('show')
 
-        jQuery(lcDialog).dialog(
-          {
-            title: 'Slogan',
-            width: '90%',
-            height: 'auto',
-            modal: true,
-            autoOpen: true,
-            show: {
-              effect: 'fade',
-              duration: 300
-            },
-            hide: {
-              effect: 'fade',
-              duration: 300
-            },
-            create: function (toEvent, toUI)
-            {
-              // The maxWidth property doesn't really work.
-              // From http://stackoverflow.com/questions/16471890/responsive-jquery-ui-dialog-and-a-fix-for-maxwidth-bug
-              // And id="ShowTellQuote" gets enclosed in a ui-dialog wrapper. So. . . .
-              jQuery(this).parent().css('maxWidth', '800px');
-            }
-          });
       });
     },
 
