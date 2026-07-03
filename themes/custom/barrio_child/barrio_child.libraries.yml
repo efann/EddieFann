@@ -41,6 +41,18 @@ beo.routines:
   dependencies:
     - core/jquery
 
+lightbox2:
+  remote: https://lokeshdhakar.com/projects/lightbox2/
+  license:
+    name: MIT License
+    url: https://lokeshdhakar.com/projects/lightbox2/#license
+    gpl-compatible: true
+  js:
+    js/lightbox2-2.11.3/dist/js/lightbox.min.js: {}
+  css:
+    component:
+      js/lightbox2-2.11.3/dist/css/lightbox.min.css: {}
+
 barrio.theme:
   # We now only want the beo.routines.js, not the css
   # as Bootstrap 4 has subtle differences from 3.
@@ -61,5 +73,6 @@ theme.files:
 custom-loading:
   dependencies:
     - barrio_child/beo.routines
+    - barrio_child/lightbox2
     - barrio_child/barrio.theme
     - barrio_child/theme.files
