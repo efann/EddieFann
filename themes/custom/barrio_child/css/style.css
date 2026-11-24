@@ -72,6 +72,11 @@ ol.line-padding li:not(:first-child)
   background: #002C54;
 }
 
+#navbar-main
+{
+  top: 75px;
+}
+
 nav.navbar .container,
 nav.navbar .container .row,
 #block-barrio-child-headerblock
@@ -133,17 +138,6 @@ nav.navbar .container .row,
 {
   text-decoration: none;
   color: #0B93D5;
-}
-
-/*----------------------------------------------------------------------------------------------------*/
-/*
-  Slogan
-*/
-
-#Slogan .modal-body
-{
-  background-color: #002C54;
-  color: white;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -245,4 +239,35 @@ div.carousel.slide .carousel-control-next
   border: none;
 }
 
-/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+/*
+  Bootstrap Modal
+*/
+
+.modal-header
+{
+  font-weight: bold;
+  height: 15px;
+}
+
+.modal-header .modal-title
+{
+  margin: -0.5rem;
+}
+
+.modal-header .close
+{
+  padding: 0.5rem;
+}
+
+.modal-body
+{
+  background-color: #002C54;
+  color: white;
+}
+
+.modal-header,
+.modal-body
+{
+  border: 1px solid #002C54;
+}
