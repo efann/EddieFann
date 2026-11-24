@@ -72,11 +72,6 @@ ol.line-padding li:not(:first-child)
   background: #002C54;
 }
 
-#navbar-main
-{
-  top: 75px;
-}
-
 nav.navbar .container,
 nav.navbar .container .row,
 #block-barrio-child-headerblock
