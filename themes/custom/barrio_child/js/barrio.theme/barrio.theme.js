@@ -1,4 +1,6 @@
-// Updated on October 5, 2022
+// License: Eclipse Public License - v 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html)
+// Updated on November 5, 2026
+
 //----------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------
@@ -56,9 +58,9 @@ var BarrioTheme =
       }
 
       // Now includes the admin menu tools when logged in.
-      lnTop += (loTopNavBar.length !== 0) ? Math.max(loTopNavBar.height(), parseFloat(loTopNavBar.css('height'))) : 0;
-      lnTop += (loToolBarAdmin.length !== 0) ? Math.max(loToolBarAdmin.height(), parseFloat(loToolBarAdmin.css('height'))) : 0;
-      lnTop += (loToolBarTab.length !== 0) ? Math.max(loToolBarTab.height(), parseFloat(loToolBarTab.css('height'))) : 0;
+      lnTop += (loTopNavBar.length != 0) ? Math.max(loTopNavBar.height(), parseFloat(loTopNavBar.css('height'))) : 0;
+      lnTop += (loToolBarAdmin.length != 0) ? Math.max(loToolBarAdmin.height(), parseFloat(loToolBarAdmin.css('height'))) : 0;
+      lnTop += (loToolBarTab.length != 0) ? Math.max(loToolBarTab.height(), parseFloat(loToolBarTab.css('height'))) : 0;
 
       loMainNavBar.css('top', lnTop + 'px');
     }
